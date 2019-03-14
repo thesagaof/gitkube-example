@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   var handleSubmission = function(e) {
     e.preventDefault();
-    var entryValue = eid.val() + ig.val() + level.val() + capab.val()
+    var entryValue = eid.val()
     if (entryValue.length > 0) {
       entriesElement.append("<p>...</p>");
       $.getJSON("rpush/guestbook/" + entryValue, appendGuestbookEntries);
