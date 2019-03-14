@@ -1,0 +1,26 @@
+apiVersion: gitkube.sh/v1alpha1
+kind: Remote
+metadata:
+  creationTimestamp: null
+  name: myremote
+  namespace: default
+spec:
+  authorizedKeys:
+  - |
+    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDo9w5ku1WFvpjQHRL4/rxYPZX5+8fRS/4ebtF08L/bqc9k5MVGqnl6ng5GmiVBy4amBGm0Qyeo3tXQC/EoYrjWyT0XTlsAjslI3ZDIqNLewcTgomD2OJaMaOJtt7Lju+8+zyPIVu1sPfUbHPHlM86VfDKmAXx9W4rrVEbESK2mqSxIFf+NWA7wOxFPAicFEs46xmbeRRvYqEus6hHu6B3RnF2Wxtd9aiUqHet/3Aw3WL7duqLwb40ibhZG1E1JShn2JBAn8uAHxlc0roBxvkoCYbtkg4wt3e917y06r0ClcXQsJVtU/jfv6QNy8lkIZI0CQXpefGuNpkyg5ho+tN5T3Ac2DoYR5airxWYeCudauMBmze3DIcUkBvm8uoLUpVtlc48qW/dZc2as+OIPoCV8uTnogKZKnN4cUDQz0CLNzqxYL2bnw4YtHZuoATjumw8p/44XR9rWjC3lVXEQasEvzrcR/a9iUsbdZWtE86fvlzywGrmFcF1XkxfXivHcFYSUYWoJDgiXDHvUFzxUyKRuBo19kmU5++vvXxFKDoFDUrq0XdEhSxLe6CFh+7tRhA1zUUiDoXS4yo9Cl4Gbl0BWBNCFf7UTRtH42djfIw17VJiacjyxrd+opf4Eb0yVLmIR/tqF8vqcTk5DYMK5bgHuEDLI0msN8fXvtVIXvU1vuw== thesagaofthings@gmail.com
+  deployments:
+  - containers:
+    - dockerfile: mono-repo/microservices/nginx/Dockerfile
+      name: www
+      path: mono-repo/microservices/nginx
+    name: www
+  manifests:
+    helm: {}
+    path: mono-repo/manifests
+  registry:
+    credentials:
+      secretKeyRef:
+        key: ""
+status:
+  remoteUrl: ""
+  remoteUrlDesc: ""
