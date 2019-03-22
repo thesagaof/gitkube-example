@@ -1,4 +1,4 @@
-body, input, select {
+body, input {
   color: #123;
   font-family: "Gill Sans", sans-serif;
 }
@@ -10,7 +10,7 @@ div {
   text-align: center;
 }
 
-h1, h2, p, input, select, a {
+h1, h2, p, input, a {
   font-weight: 300;
   margin: 0;
 }
@@ -30,7 +30,7 @@ form {
   text-align: center;
 }
 
-input, select {
+input {
   border: 0;
   border-radius: 1000px;
   box-shadow: inset 0 0 0 2px #BDB76B;
@@ -58,8 +58,4 @@ form a {
 p {
   font-size: 1.5em;
   line-height: 1.5;
-}
-
-::-webkit-input-placeholder {
-  text-align: center;
 }
